@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Material timer</title>
+  <style>
+    @import "https://fonts.googleapis.com/css?family=Play:700";body{display:flex;flex-direction:column;height:100vh;margin:0;background-color:#FF7043;justify-content:center;align-items:center}div#clock{display:flex;cursor:default;letter-spacing:.1em;color:#f2f2f2;background:linear-gradient(to bottom,#ff7043 1%,#ff6b42 100%);box-shadow:0 20px 20px -15px #dc4718;font-family:Play;font-size:50pt}span{min-width:90px;margin-right:20px;transition:all .5s}div[data-control]{display:flex;flex-direction:row;width:592px;margin-top:40px;justify-content:space-around}div[data-control] input{padding:12px 50px;cursor:pointer;transition:all ease-in-out 300ms;text-transform:uppercase;font-family:Play;letter-spacing:1pt;color:#f2f2f2;border:none;border-radius:5px;background:none;background-color:#4CAF50;box-shadow:0 17px 10px -10px rgba(0,0,0,0.4)}div[data-control] input:hover{transform:translate(0px,-10px);box-shadow:0 30px 10px -10px rgba(0,0,0,0.2)}div[data-control] input:focus{outline:none}.seconds{font-size:0}
+  </style>
+</head>
+<body>
+
+  <div id="clock" data-countdown data-countdown-start="00:00:00:01">
+    <span id="clock-days"></span>
+    <span id="clock-hours"></span>
+    <span id="clock-minutes"></span>
+    <span id="clock-seconds"></span>
+  </div>
+  <div data-control>
+    <input type="button" id="start-clock" value="start">
+  </div>
+
+  <script src="lib/jQuery/jquery-2.2.3.min.js"></script>
+  <script src="lib/underscore.js/underscore-min.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
